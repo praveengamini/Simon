@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimonGame</title>
+    <link href="index.css" rel="stylesheet"> 
+</head>
+<body id="back-ground">
+    <h1 id="gamename">SimonGame</h1>
+<div class="main-content">
+    <h1 id="result">Level-0</h1>
+    <div class="buttons-simon">
+    <button id="red" onclick="red()">red</button>
+    <button id="blue" onclick="blue()">blue</button>
+    <button id="green" onclick="green()">green</button>
+    <button id="yellow" onclick="yellow()">yellow</button>
+</div>
+<button id="start" onclick="start()">start</button>
+</div>
+<div> 
+    <button id="what" onclick="questionmark()" >?</button>
+    <div id="instructions" class="instructionshide">
+        <ol>
+        <li>Press the Start button to turn on the game. The game will start with a simple pattern.</li>
+        <li>Pay attention to the pattern. Each color will light up, and there will be a sound.</li>
+        <li>Remember the order in which the colors light up and the sounds play. This is the pattern you need to repeat.</li>
+        <li>After the pattern finishes, it's your turn. Press the buttons in the same order as the pattern you saw and heard.</li>
+        <li>If you press the right buttons in the right order, the game will show the same pattern again, but with an extra step added.</li>
+        <li>Keep copying the pattern as it gets longer and more challenging.</li>
+        <li>If you press the wrong button or forget the pattern, the game ends, and you have to start again.</li>
+        <li>Keep playing and try to beat your highest score!</li>
+      </ol>
+      </div>
+</div>
+
+<script src="index.js"></script>  
+</body>
+</html>

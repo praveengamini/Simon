@@ -1,0 +1,93 @@
+body {
+    background-image: url(dice.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* or contain, or specify a fixed size */
+    filter: blur(0.3px); /* Apply a blur effect to the background */
+}
+#gamename{
+    text-align: center;
+    color: rgb(196, 35, 59);
+    font-weight:bolder;
+    font-size: 40px;
+}
+#result{
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+.buttons-simon{
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px;
+}
+.buttons-simon>*{
+    border-radius: 1rem;
+}
+.flip-horizontal {
+    transform: scaleX(-1);
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+#blue{
+    background-color: rgb(80, 80, 220);
+    width: 70px;
+    height: 70px;
+}
+#green{
+    background-color: rgb(48, 227, 48);
+    width: 70px;
+    height: 70px;
+
+}
+#red{
+    background-color: rgb(220, 25, 25);
+    width: 70px;
+    height: 70px;
+}
+#yellow{
+    background-color: rgb(232, 232, 23);
+    width: 70px;
+    height: 70px;
+}
+#start{
+    background-color: aqua;
+    border-radius: 2rem;
+    width: 80px;
+    height: 40px;
+
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.blink{
+    animation: blink 0.8s;
+}
+back-ground{
+    background-color: black;
+}
+#what{
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+}
+#instructions{
+}
+.instructionshide{
+    visibility: hidden;
+}
+.instructionsvis{
+    background-color: white;
+    font-weight: 700;
+    width: 600px;
+    visibility: visible;  
+    max-height: 500px;
+    transition: max-height 0.9s ease;
+
+}
