@@ -1,0 +1,907 @@
+<title>SIMON'S GAME</title>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+<body  class="total">
+    <div class="welcome">
+     <div class="wel">
+       <div class="gradient">
+            Welcome to the Simon Playz..
+                    &#128519&#128525
+        </div> 
+     </div>   
+     <button  class="button">Enter</button>
+     <div class="flex1" style="display: flex;gap: 10px;">
+        <button class="help">?</button>
+     <button class="speaker"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-megaphone" viewBox="0 0 16 16">
+        <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49a68.14 68.14 0 0 0-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 74.663 74.663 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199V2.5zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0zm-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233c.18.01.359.022.537.036 2.568.189 5.093.744 7.463 1.993V3.85zm-9 6.215v-4.13a95.09 95.09 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A60.49 60.49 0 0 1 4 10.065zm-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68.019 68.019 0 0 0-1.722-.082z"/>
+      </svg></button>
+     </div>
+    <div class="helpbox">
+        HELP:-<br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>Let's see how this game actually works&#129321.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>In the first round a random colour blinks and the player has to memorize the color and click on it.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>Once the colour is right the next successive colour blinks ,here the player has to click the previous colour and the present colour in the sequence of blink. <br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>After every successive right attempt a random colour blinks and the player has to click all the colours from the start that he remembers in the correct sequence.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>If a wrong attempt is detected the game will stop &#129319 and the game can be restarted by pressing the start button.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>Thank you ,hope you have fun &#128519....  <br><hr>
+          
+
+    </div>
+</div>
+
+  <div class="simon">
+    <img class="arrow" src="arrow.jpeg">
+    <button class="help1">?</button>
+    <div class="helpbox1">
+        HELP:-<br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>Let's see how this game actually works&#129321.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>In the first round a random colour blinks and the player has to memorize the color and click on it.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>Once the colour is right the next successive colour blinks ,here the player has to click the previous colour and the present colour in the sequence of blink. <br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>After every successive right attempt a random colour blinks and the player has to click all the colours from the start that he remembers in the correct sequence.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>If a wrong attempt is detected the game will stop &#129319 and the game can be restarted by pressing the start button.<br><hr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>Thank you ,hope you have fun &#128519....  <br><hr>
+          
+
+    </div>
+    <div style="display: flex;flex-direction: column;" class="flex">
+        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center;" class="level">
+            <div class="level0">Level :</div>
+            <div class="level1">0</div>
+        </div>
+        <div class="grid">
+        <button onclick="clickedblue()" class="blue help" style="background-color: blue;"></button>
+        <button onclick="clickedred()" class="red help" style="background-color: red;"></button>
+        <button onclick="clickedgreen()" class="green help" style="background-color:  rgb(103, 213, 103);"></button>
+        <button onclick="clickedyellow()" class="yellow help" style="background-color: yellow;"></button>
+       
+    
+    </div>
+    
+    <div class="wood">
+
+        <button class="startbutton" onclick="start()">Start</button>
+        <div class="display">Let's begin...</div>
+        <div class="score1" style="display: inline-flex;flex-direction: row;"> SCORE :  <div class="score"> 0</div></div>
+    </div>
+    </div>
+  </div>  
+
+</body>
+<style>
+    @media(max-width:600px) {
+    
+    .level{
+        color: white;
+        font-size: 30px;
+        background-color: black;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        height: 100px;
+        width: 300px;
+        border-radius: 30px;
+    }
+     
+    .flex1{
+        flex-direction: column;
+    }
+    .wood{
+        display: inline-flex;
+        gap: 10px;
+        padding: 10px;
+        flex-direction:column ;
+        color:white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        align-items: center;
+        font-size: 340%;
+        width: 70%;
+        height: 300px;
+        background-image: url(wooden\ back.jpg);
+    }
+    .help1{
+        height: 40px;
+        width: 40px;
+        vertical-align: top;
+        font-size: 20px;
+        color: white;
+        background-color: black;
+    }
+    .arrow{
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        margin-left:100px ;
+    }
+    .helpbox{
+        color: white;
+        overflow: auto;
+        background-color: black;
+        width:50%;
+        height: 100%;
+        padding: 20px;
+        font-size: 20px;
+        border: 2px solid white;
+        
+    }
+    .helpbox1{
+        color: white;
+        overflow: auto;
+        background-color: black;
+        width:50%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        height: 400px;
+        padding: 20px;
+        font-size: 20px;
+        border: 2px solid white;
+    }
+    .speaker{
+        width: 30px;
+        height:35px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:white;
+        font-size: 20px;
+        background-color: black;
+        cursor: pointer;
+    }
+    .speaker:hover{
+        background-color: rgb(97, 90, 90);
+        box-shadow: 5px 3px 10px;
+    }
+    .speaker:active{
+        background-color: white;
+        color: black;
+    }
+    .help{
+        width: 30px;
+        height:35px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:white;
+        font-size: 20px;
+        background-color: black;
+        cursor: pointer;
+    }
+    .help:hover,.help1:hover,.arrow:hover{
+        background-color: rgb(97, 90, 90);
+        box-shadow: 5px 3px 10px;
+    }
+    .help:active,.help1:active,.arrow:active{
+        background-color: white;
+        color: black;
+    }
+    .audio{
+       opacity: 0;
+    }
+    .button{
+        height: 10%;
+        width: 150px;
+        border-radius: 30px;
+        font-size: 50%;
+        font-style: oblique;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(233, 148, 117);
+        cursor: pointer;
+        box-shadow: 5px 5px 20px;
+        transition:box-shadow 0.2s,font-size 0.2s,height 0.2s,width 0.2s ;
+        
+    }
+    .button:hover{
+        box-shadow: 7px 7px 10px;
+        font-size:60% ;
+        height: 11%;
+        width: 155px;
+    }
+    .button:active{
+        background-color: rgb(225, 111, 69);
+        border:1px solid white;
+
+    }
+    .wel{
+        border:2px solid black;
+        border-radius: 80px;
+        padding: 20px;
+        transition: color 1s,font-size 1s;
+        
+    }
+    .wel:hover{
+        color: white;
+        font-size:110% ;
+    }
+    .welcome{
+        margin-top:100px ;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: justify;
+        vertical-align: middle;
+        font-size: 450%;
+        height: 70%;
+        justify-content: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        
+        
+        
+    }
+    .failurecase{
+        background-color: red;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 900;
+    }
+    .successcase{
+        background-color: rgb(78, 208, 78);
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 900;
+    }
+    .total {
+        background-image: url(IMG_20230920_163412.jpg);
+        }
+        .wel {
+    background: linear-gradient(270deg, #ff0000, #eeff00, #00ff2b, #00fff6, #0027ff, #ee72c3);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+.display{
+       
+        padding-top: 15px;
+        height: 100px;
+        width: 500px;
+        border-radius: 30px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        align-items: center;
+        
+    }
+    .startbutton{
+        display: block;
+        background-color:rgb(0, 0, 0);
+        height: 60px;
+        width: 100px;
+        font-size: 2rem;
+        padding: 5px;
+        color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;    
+        font-style: oblique;
+        font-weight: 800;
+        border-radius: 10px;
+        margin: 0% 45%;
+        transition:box-shadow 0.2s ;
+    }
+    .startbutton:hover{
+        cursor: pointer;
+        box-shadow: 5px 5px 10px white;
+    }
+    .startbutton:active{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        box-shadow: 5px 5px 10px white;
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 10px;
+        border: 3px solid black;
+        padding :5%;
+        border-radius: 50%;
+        background-color: black;
+        border: 2px solid white;
+    
+    }
+    .grid>*{
+        border: 2px solid  black;
+        
+    }
+    .grid>*:active{
+        opacity: 0.5;
+    }
+    .blue,.red,.green,.yellow{
+        height: 200px;
+        width:200px;
+        cursor: pointer;
+        border-radius: 60px;
+        transition: box-shadow 0.2s;
+    }
+    .blue:active,.red:active,.green:active,.yellow:active{
+        opacity: 0.5;
+        border-style: dashed;       
+    }
+    
+
+
+
+    .blink{
+        opacity:0.2;
+        border:4px solid white;
+    } 
+}
+
+
+
+
+.level{
+        color: white;
+        font-size: 30px;
+        background-color: black;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        height: 100px;
+        width: 300px;
+        border-radius: 30px;
+    }
+    .score1{
+        font-family:cursive;
+    }
+    
+    .wood{
+        display: inline-flex;
+        gap: 10px;
+        padding: 10px;
+        flex-direction:column ;
+        color:white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        align-items: center;
+        font-size: 340%;
+        width: 70%;
+        height: 300px;
+        background-image: url(wooden\ back.jpg);
+    }
+    .help1{
+        height: 40px;
+        width: 40px;
+        vertical-align: top;
+        font-size: 20px;
+        color: white;
+        background-color: black;
+    }
+    .arrow{
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        margin-left:100px ;
+    }
+    .helpbox{
+        color: white;
+        overflow: auto;
+        background-color: black;
+        width:50%;
+        height: 100%;
+        padding: 20px;
+        font-size: 20px;
+        border: 2px solid white;
+        
+    }
+    .helpbox1{
+        color: white;
+        overflow: auto;
+        background-color: black;
+        width:50%;
+        height: 400px;
+        padding: 20px;
+        font-size: 20px;
+        font-family: cursive;
+        border: 2px solid white;
+    }
+    .speaker{
+        width: 30px;
+        height:35px;
+        font-family: cursive;
+        color:white;
+        font-size: 20px;
+        background-color: black;
+        cursor: pointer;
+    }
+    .speaker:hover{
+        background-color: rgb(97, 90, 90);
+        box-shadow: 5px 3px 10px;
+    }
+    .speaker:active{
+        background-color: white;
+        color: black;
+    }
+    .help{
+        width: 30px;
+        height:35px;
+        font-family: cursive;
+        color:white;
+        font-size: 20px;
+        background-color: black;
+        cursor: pointer;
+    }
+    .help:hover,.help1:hover,.arrow:hover{
+        background-color: rgb(97, 90, 90);
+        box-shadow: 5px 3px 10px;
+    }
+    .help:active,.help1:active,.arrow:active{
+        background-color: white;
+        color: black;
+    }
+    .audio{
+       opacity: 0;
+    }
+    .button{
+        height: 10%;
+        width: 150px;
+        border-radius: 30px;
+        font-size: 50%;
+        font-style: oblique;
+        font-family: cursive;
+        background-color: rgb(233, 148, 117);
+        cursor: pointer;
+        box-shadow: 5px 5px 20px;
+        transition:box-shadow 0.2s,font-size 0.2s,height 0.2s,width 0.2s ;
+        
+    }
+    .button:hover{
+        box-shadow: 7px 7px 10px;
+        font-size:60% ;
+        height: 11%;
+        width: 155px;
+    }
+    .button:active{
+        background-color: rgb(225, 111, 69);
+        border:1px solid white;
+
+    }
+    .wel{
+        border:2px solid black;
+        border-radius: 80px;
+        padding: 20px;
+        transition: color 1s,font-size 1s;
+        
+    }
+    .wel:hover{
+        color: white;
+        font-size:110% ;
+    }
+    .welcome{
+        margin-top:100px ;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: justify;
+        vertical-align: middle;
+        font-size: 450%;
+        height: 70%;
+        justify-content: center;
+        font-family: cursive;
+        color: black;
+        
+        
+        
+    }
+    .failurecase{
+        background-color: red;
+        font-family: cursive;
+        font-weight: 900;
+    }
+    .successcase{
+        background-color: rgb(78, 208, 78);
+        font-family: cursive;
+        font-weight: 900;
+    }
+    .total {
+        background-image: url(IMG_20230920_163412.jpg);
+        }
+        .wel {
+    background: linear-gradient(270deg, #ff0000, #eeff00, #00ff2b, #00fff6, #0027ff, #ee72c3);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+.display{
+       
+        padding-top: 15px;
+        height: 100px;
+        width: 500px;
+        border-radius: 30px;
+        font-family:cursive;
+        text-align: center;
+        align-items: center;
+        
+    }
+    .startbutton{
+        display: block;
+        background-color:rgb(0, 0, 0);
+        height: 60px;
+        width: 100px;
+        font-size: 2rem;
+        padding: 5px;
+        color: white;
+        font-family:cursive;    
+        font-style: oblique;
+        font-weight: 800;
+        border-radius: 10px;
+        margin: 0% 45%;
+        transition:box-shadow 0.2s ;
+    }
+    .startbutton:hover{
+        cursor: pointer;
+        box-shadow: 5px 5px 10px white;
+    }
+    .startbutton:active{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        box-shadow: 5px 5px 10px white;
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 10px;
+        border: 3px solid black;
+        padding :5%;
+        border-radius: 50%;
+        background-color: black;
+        border: 2px solid white;
+    
+    }
+    .grid>*{
+        border: 2px solid  black;
+        
+    }
+    .grid>*:active{
+        opacity: 0.5;
+    }
+    .blue,.red,.green,.yellow{
+        height: 200px;
+        width:200px;
+        cursor: pointer;
+        border-radius: 60px;
+        transition: box-shadow 0.2s;
+    }
+    .blue:active,.red:active,.green:active,.yellow:active{
+        opacity: 0.5;
+        border-style: dashed;       
+    }
+    
+
+
+
+    .blink{
+        opacity:0.2;
+        border:4px solid white;
+    }
+</style>
+
+
+<script>
+   
+
+
+    $(".helpbox").hide()
+    $(".simon").hide()
+    $(".help").click(function(){
+        $(".helpbox").toggle("show");
+        
+    })
+    $(".helpbox1").hide();
+    $(".help1").click(function(){
+        $(".helpbox1").toggle("show");
+        
+    })
+    $(".button").click(function(){
+        
+        $(".welcome").slideToggle();
+        var audio=new Audio("click.mp3")
+        audio.play();
+        setTimeout(function(){
+            $(".simon").toggle("show");
+        },1000)
+   
+    })
+
+    $(".arrow").click(function(){
+        var audio=new Audio("click.mp3")
+        audio.play();
+
+        setTimeout(function(){
+            $(".welcome").slideToggle();
+        
+        },500);
+        $(".simon").slideUp("show")
+    })
+
+    $(".help").click(function(){
+        var audiio = new Audio("bubblesound.wav")
+        audiio.play();
+    })
+    $(".speaker").click(function(){
+        var audiio = new Audio("entrance.mp3")
+        audiio.play();
+    })
+
+
+        j=1;
+        k=0;
+        const arr=[]
+        const clicked=[]
+   game();
+   
+   function game(){
+        
+        blink(arr);
+        
+      
+   }
+        function clickedblue(){
+            clicked.push("1");
+            
+            check();
+        
+            
+        }
+        function clickedred(){
+            clicked.push("2");  
+            check();
+        
+        }
+        function clickedgreen(){
+            clicked.push("3"); 
+            check();  
+        
+        }
+        function clickedyellow(){
+            clicked.push("4"); 
+            check();
+            
+            
+        }
+
+
+
+
+        function check(){
+            if(clicked.length==j)
+            {
+                rightcheck();
+            }
+        }
+
+
+        function rightcheck(){
+            flag=1;
+            for(a=0;a<j;a++){
+                if(arr[a]!=clicked[a]){
+                    flag=0;
+                    break;
+                }
+            }
+            if(flag==1)
+            {
+                setTimeout(right,500);
+            }
+            else {
+                setTimeout(wrong,500);
+            }
+        }
+
+
+
+
+
+        function right(){
+            $(".level1").html(j)
+            $(".score").html(j*5)
+            var audio=new Audio("congrats.wav")
+            audio.play();
+            if(j%8==0){
+                $(".display").html("Super!!")
+            }
+            else if(j%8==1){
+                $(".display").html("Awesome!!")
+            }
+            else if(j%8==2){
+                $(".display").html("Keep going!!!")
+            }
+            else if(j%8==3){
+                $(".display").html("Cheers!!!")
+            }
+            else if(j%8==4){
+                $(".display").html("Mastered!!!")
+            }
+            else if(j%8==5){
+                $(".display").html("Professional!!!")
+            }
+            else if(j%8==6){
+                $(".display").html("Vintage!!!")
+            }
+            else if(j%8==7){
+                $(".display").html("Game changer!!!")
+            }
+            
+            $(".display").addClass("successcase")
+            for(p=0;p<j;p++)
+                clicked.pop()
+            j++;
+            blink(arr);
+            
+
+            function clickedblue(){
+            clicked.push("1");
+            check();
+            }
+            function clickedred(){
+            clicked.push("2");  
+            check();
+            }
+            function clickedgreen(){
+            clicked.push("3"); 
+            check();  
+            }
+            function clickedyellow(){
+            clicked.push("4"); 
+            check();       
+            }
+            await();
+        }
+
+        function wrong(){
+            var audio=new Audio("lost.mp3")
+            audio.play();
+            $(".score").html("0")
+            $(".display").html("Oops,you lost!!")
+            $(".display").removeClass("successcase")
+            $(".display").addClass("failurecase")
+            setTimeout(function(){
+                $(".display").html("Press start!!")
+                $(".level1").html("0")
+                $(".score").html("0")
+                },2000)
+                for(p=0;p<j;p++)
+                    clicked.pop();
+        }
+   function blink(arr){
+            
+            arr.push(Math.floor(Math.random()*4)+1)
+                
+                if(arr[k]==1){{
+                    blueblink();
+                }}
+                    
+                if(arr[k]==2){
+                    redblink();
+                }
+                    
+                if(arr[k]==3){
+                    greenblink();
+                }
+                    
+                if(arr[k]==4){
+                    yellowblink();
+                } 
+                k++;
+            
+    
+            function blueblink(){
+                $(".blue").addClass("blink");
+                setTimeout(function(){
+                    $(".blue").removeClass("blink")
+                },1000)
+            }
+    
+            function redblink(){
+                $(".red").addClass("blink");
+                setTimeout(function(){
+                    $(".red").removeClass("blink")
+                },1000)
+            }
+    
+            function greenblink(){
+                $(".green").addClass("blink");
+                setTimeout(function(){
+                    $(".green").removeClass("blink")
+                },1000)
+            }
+    
+            function yellowblink(){
+                $(".yellow").addClass("blink");
+                setTimeout(function(){
+                    $(".yellow").removeClass("blink")
+                },1000)
+            }
+            return arr;
+            }
+    function start(){
+        $(".score").html("0")
+        var audio=new Audio("bubblesound.wav")
+            audio.play();
+            
+            $(".display").removeClass("successcase")
+        $(".display").removeClass("failurecase")
+        $(".display").html("Let's begin...")
+        $(".level1").html("0")
+        
+        j=1;
+        k=0;
+        const arr=[]
+        const clicked=[]
+        game();
+    }
+</script>
